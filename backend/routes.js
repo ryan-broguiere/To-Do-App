@@ -3,19 +3,8 @@ const Task = require("./task");
 const router = express.Router();
 
 router.post("/add_task", async (request, response) => {
-    // const task = new Task({
-    //   taskName: request.body.taskName,
-      
-    // });
-    // task.save()
-    // .then(data =>{
-    //   response.json(data)
-    // })
-    // .catch(error =>{
-    //   response.json(error)
-    // })
-
     const task = new Task(request.body)
+    
     try {
       await task.save();
       response.send(task);
