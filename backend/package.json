@@ -12,6 +12,8 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "env": "^0.0.2",
     "mongodb": "^4.2.0"
   }
 }
