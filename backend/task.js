@@ -13,9 +13,4 @@ const taskSchema = new mongoose.Schema({
 });
 
 
-// const taskOne = new Task({
-//     taskName: "finish this task"
-    
-// });
-
 module.exports = mongoose.model("addedTasks", taskSchema);
