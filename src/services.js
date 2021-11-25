@@ -1,4 +1,4 @@
-import axious from 'axios';
+import axios from 'axios';
 
 export function getTasks(){
     return axios.get("http://localhost:4000/tasks")
