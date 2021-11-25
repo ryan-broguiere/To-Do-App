@@ -33,13 +33,8 @@ const [input, setInput] = useState('')
             <tr>
             <td class="whitespace-nowrap">
                 <div class="flex items-center">                  
-                  <div>
-                  <label class="flex items-center space-x-3 mb-3">
-                <input type="checkbox" name="checked-demo" class="form-tick appearance-none bg-white bg-check h-6 w-6 border border-gray-300 rounded-md checked:bg-green-500 checked:border-transparent focus:outline-none"/>
-                    <span class="text-gray-700 dark:text-white font-normal">
-                        Green
-                    </span>
-                </label>
+                  <div class="pl-4">
+                  <input type="checkbox" class="form-checkbox" />
                     
                   </div>
                 </div>
