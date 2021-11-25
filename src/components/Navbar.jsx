@@ -3,30 +3,24 @@ import React from 'react'
 function Navbar() {
     return (       
 
-        <nav class="bg-white rounded-md shadow-xl dark:bg-gray-800">
-        <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-gray-700 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
-                    <a href="#"><img class="inline p-1 mb-2" src="https://img.icons8.com/external-flatarticons-blue-flatarticons/65/000000/external-task-work-from-home-flatarticons-blue-flatarticons.png" width="50" height="50" alt=""/></a>
-                    T͛o͛D͛o͛
-                </div>                
-               
-            </div>
-
-            
-            <div class="items-center md:flex">
-                
-
-                <div class="flex justify-center md:block">
-                    <a class="relative text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
-                    <img height="40" width="40" src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-settings-interface-kiranshastry-gradient-kiranshastry.png"/>
-
-                        
-                    </a>
-                </div>
-            </div>
-        </div>
+        <header class="text-gray-400 bg-gray-900 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">ToDo List</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      
     </nav>
+    <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Button
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</header>
 
     )
 }
