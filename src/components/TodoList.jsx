@@ -12,16 +12,16 @@ function TodoList() {
     })
 
     const LoadTasks = () => {
-      axios.get("http://localhost:4000/tasks")      
+      axios.get("https://productivity-list.netlify.app/tasks")      
       .then(response => setNewTask(response.data));
     }
 
     const completeTask = async (taskId) =>{
-        axios.put("http://localhost:4000/tasks/addedtasks/"+ taskId)        
+        axios.put("https://productivity-list.netlify.app/addedtasks/"+ taskId)        
     }
 
     const deleteTask = async (taskId) =>{
-      axios.delete("http://localhost:4000/tasks/delete/" + taskId)
+      axios.delete("https://productivity-list.netlify.app/delete/" + taskId)
     }
     return (
       <section>

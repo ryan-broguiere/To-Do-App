@@ -10,7 +10,7 @@ const TodoForm = () => {
         const newTask = {
             taskName: inputText
         }
-        axios.post("http://localhost:4000/add_task", newTask);
+        axios.post("https://productivity-list.netlify.app/add_task", newTask);
 
         
     }
