@@ -19,6 +19,10 @@ function TodoList() {
     const completeTask = async (taskId) =>{
         axios.put("http://localhost:4000/tasks/addedtasks/"+ taskId)        
     }
+
+    const deleteTask = async (taskId) =>{
+      axios.delete("http://localhost:4000/tasks/delete/" + taskId)
+    }
     return (
       <section>
       {newTask.map((task) =>   
