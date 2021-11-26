@@ -29,8 +29,14 @@ const router = express.Router();
 
 
   router.delete("/tasks/delete/:taskId", async (request, response) => {
+    try{
     const result = await Task.findByIdAndDelete(request.params.taskId)
     response.json(result)
+    }
+    catch(error)
+    {
+      response.send(error)
+    }
   });
 
   router.put("/tasks/addedtasks/:taskId", async (request, response) => {
