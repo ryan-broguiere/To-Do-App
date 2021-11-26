@@ -27,6 +27,11 @@ const router = express.Router();
     response.json(tasks);
   })
 
+  // router.get("/tasks/:taskId", async (request, response) => {
+  //   const result = await Task.findById(request.params.taskId);
+  //   response.json(task)
+  // })
+
   router.delete("/tasks/delete/:taskId", async (request, response) => {
     const result = await Task.findByIdAndDelete(request.params.taskId)
     response.json(result)
