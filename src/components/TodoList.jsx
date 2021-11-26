@@ -16,8 +16,8 @@ function TodoList() {
       .then(response => setNewTask(response.data));
     }
 
-    const completeTask = async id =>{
-        const result = axios.put("http://localhost:4000/tasks/addedtasks/"+ id)        
+    const completeTask = async (taskId) =>{
+        axios.put("http://localhost:4000/tasks/addedtasks/"+ taskId)        
     }
     return (
       <section>
@@ -31,7 +31,7 @@ function TodoList() {
           </svg>
           </button>
           <span className={"title-font font-semibold text-gray-100" + (task.status ? " text-blue-400 line-through":"")}>{task.taskName} </span>
-          <button className="float-right absolute right-4 transition duration-400 transform hover:scale-110">
+          <button className="float-right absolute right-4 transition duration-400 transform hover:scale-110" onClick={ () => deleteTask(task._id)}>
           <img width="25" height="25" src="https://img.icons8.com/flat-round/64/000000/delete-sign.png" alt='delete'/>         
           </button>    
       </div>)}  
