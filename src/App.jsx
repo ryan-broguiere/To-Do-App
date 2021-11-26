@@ -10,9 +10,7 @@ function App() {
       <Navbar/>
       <TodoForm/>
       <TodoList/>
-      <Footer/>
-      
-      
+      <Footer/>      
     </div>
    
     

@@ -26,8 +26,9 @@ const router = express.Router();
 
   router.put("/tasks/addedtasks/:taskId", async (request, response) => {
     const task = await Task.findById(request.params.taskId);
-
+    
     task.status = !task.status;
+    task.date = new Date();
 
     task.save();
 
