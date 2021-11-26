@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+const url = "http://localhost:4000"
 
 const TodoForm = () => {
     const [inputText, setInputText] = useState('')
@@ -10,7 +11,7 @@ const TodoForm = () => {
         const newTask = {
             taskName: inputText
         }
-        axios.post("https://productivity-list.netlify.app/add_task", newTask);
+        axios.post(url + "/add_task", newTask);
 
         
     }

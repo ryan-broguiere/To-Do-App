@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
-
+const url = "http://localhost:4000/tasks";
 
 function TodoList() {
   
@@ -12,16 +12,16 @@ function TodoList() {
     })
 
     const LoadTasks = () => {
-      axios.get("https://productivity-list.netlify.app/tasks")      
+      axios.get(url)      
       .then(response => setNewTask(response.data));
     }
 
     const completeTask = async (taskId) =>{
-        axios.put("https://productivity-list.netlify.app/addedtasks/"+ taskId)        
+        axios.put(url + "/addedtasks/"+ taskId)        
     }
 
     const deleteTask = async (taskId) =>{
-      axios.delete("https://productivity-list.netlify.app/delete/" + taskId)
+      axios.delete(url + "/delete/" + taskId)
     }
     return (
       <section>
