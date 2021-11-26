@@ -1,76 +1,17 @@
 import React, { useState } from 'react';
 
 function TodoForm() {
-const [input, setInput] = useState('')
+    const [input, setInput] = useState('')
     return (
-        
-<div class="mt-20 flex flex-col items-center shad">
-  <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-      <div class="shadow-lg overflow-hidden border-b border-gray-200 sm:rounded-lg">
-        <table class="min-w-full divide-y divide-gray-200">
-          <thead class="bg-gray-50">
-            <tr>
-              <th scope="col" class="text-xs font-medium text-center text-gray-500">
-               
-              </th>
-
-              <th scope="col" class="px-6 py-3 text-xs font-medium text-center text-gray-500 uppercase tracking-wider">
-               date
-              </th>
-              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Task name
-              </th>
-              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Status
-              </th>             
-              <th scope="col" class="relative px-6 py-3">
-                <span class="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
-            <td class="whitespace-nowrap">
-                <div class="flex items-center">                  
-                  <div class="pl-4">
-                  <input type="checkbox" class="form-checkbox" />
-                    
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="flex items-center">                  
-                  <div>
-                    <div class="text-sm text-gray-900">
-                      11/25/2021 - 11:57 AM
-                    </div>
-                    
-                  </div>
-                </div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm font-medium text-gray-900">Learn HTML, CSS, JavaScript</div>
-                
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                  Active
-                </span>
-              </td>
-              
-              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="text-red-500 hover:text-red-700">Delete</a>
-              </td>
-            </tr>
-
-            
-          </tbody>
-        </table>
+      
+<form class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+      <div class="relative sm:mb-0 flex-grow w-full">
+        <label for="task" class="leading-7 text-sm text-gray-300 shadow-lg">Enter Task</label>
+        <input type="text" id="task" name="full-name" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
       </div>
-    </div>
-  </div>
-</div>
+      
+      <button class="text-white rounded-md bg-blue-500 border-0 w-1/3 md:w-1/12 p-2 hover:bg-blue-700 text-lg transform duration-200 hover:scale-105 items-center hover:shadow-xl">Add Task</button>
+</form>
 
     )
 }
