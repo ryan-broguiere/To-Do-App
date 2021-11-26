@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 //const url = "http://localhost:4000/tasks";
-const url = "https://productivity-list.netlify.app";
+const url = "https://productivity-list.netlify.app/tasks";
 
 function TodoList() {
   
