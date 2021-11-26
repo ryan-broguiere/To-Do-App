@@ -1,28 +1,44 @@
 const express = require("express");
+const task = require("./task");
 const Task = require("./task");
 const router = express.Router();
 
-router.post("/add_task", async (request, response) => {
+  router.post("/add_task", async (request, response) => {
     const task = new Task(request.body)
     
-    try {
-      await task.save();
-      response.send(task);
-    } catch (error) {
-      response.send(error);
-    }
-
+    task.save();
+    response.json(task);
 
 });
 
-router.get("/tasks", async (request, response) => {
-    const tasks = await Task.find({});
-  
-    try {
-      response.send(tasks);
-    } catch (error) {
-      response.status(500).send(error);
-    }
-  });
+  // router.post("/add_task", (request, response) => {
+  //     const task = new Task({
+  //       taskName: request.body.taskName
+  //     })
 
+  //     task.save();
+
+  //     response.json(task);
+  // });
+
+  router.get("/tasks", async (request,response) => {
+    const tasks = await Task.find();
+
+    response.json(tasks);
+  })
+
+  router.delete("/tasks/delete/:taskId", async (request, response) => {
+    const result = await Task.findByIdAndDelete(request.params.taskId)
+    response.json(result)
+  })
+
+  router.put("/tasks/addedtasks/:taskId", async (request, response) => {
+    const task = await Task.findById(request.params.taskId);
+
+    task.status = !task.status;
+
+    task.save();
+
+    response.json(task);
+  })
 module.exports = router;

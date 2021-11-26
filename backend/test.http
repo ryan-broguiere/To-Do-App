@@ -5,3 +5,13 @@ content-type: application/json
     "taskName": "yoooo",
     "status": true
 }
+
+###
+GET http://localhost:4000/tasks
+
+
+###
+DELETE http://localhost:4000/tasks/delete/61a06a18dcc2269267f1479b
+
+###
+PUT http://localhost:4000/tasks/addedtasks/61a066df9a86221a5ee9deeb

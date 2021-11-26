@@ -1,10 +1,10 @@
 import React from 'react';
+import axios from 'axios';
 
 
 function TodoList() {
   
     return (
-      
       <div className="mx-auto mt-4 w-4/5 bg-gray-800 flex items-center slide-in-bottom md:w-2/5">
         <div className="bg-gray-800 rounded flex p-4 h-full items-center">
           <button className="transition duration-400 transform hover:scale-110">
@@ -15,10 +15,7 @@ function TodoList() {
           </button>
           <span className="title-font font-medium text-white">Learn HTML,CSS, Javascript </span>
           <img className="float-right absolute right-4" width="25" height="25" src="https://img.icons8.com/flat-round/64/000000/delete-sign.png" alt='delete'/>
-        </div>
-      
-        
-        
+        </div>       
       </div>
     )    
 }
