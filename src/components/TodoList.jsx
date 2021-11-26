@@ -26,7 +26,7 @@ function TodoList() {
     return (
       <section>
       {newTask.map((task) =>   
-      <div className={"mx-auto h-full p-4 mt-4 w-4/5 bg-gray-800 shadow-lg border-gray-700 border-2 flex justify-center items-center slide-in-bottom md:w-2/5" + (task.status ? " border-blue-400 border-2":"")} key={task._id}>       
+      <div className={"mx-auto h-full p-4 mt-4 w-4/5 dark:bg-gray-800 shadow-lg dark:border-gray-700 border-2 flex justify-center items-center slide-in-bottom md:w-2/5" + (task.status ? " border-blue-400 border-2":"")} key={task._id}>       
           <button className="items-left absolute left-3 transition duration-400 transform hover:scale-110">
           <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24"
           className={"text-gray-600 w-6 h-6 flex-shrink-0 mr-4 hover:text-blue-400" + (task.status ? " text-blue-400 ":"")} onClick={ () => completeTask(task._id)} >
@@ -34,7 +34,7 @@ function TodoList() {
             <path d="M22 4L12 14.01l-3-3"></path>
           </svg>
           </button>
-          <span className={"title-font font-semibold text-gray-100" + (task.status ? " text-blue-400 line-through":"")}>{task.taskName} </span>
+          <span className={"title-font font-semibold dark:text-gray-100" + (task.status ? " text-blue-400 line-through":"")}>{task.taskName} </span>
           <button className="float-right absolute right-4 transition duration-400 transform hover:scale-110" onClick={ () => deleteTask(task._id)}>
           <img width="25" height="25" src="https://img.icons8.com/flat-round/64/000000/delete-sign.png" alt='delete'/>         
           </button>    
