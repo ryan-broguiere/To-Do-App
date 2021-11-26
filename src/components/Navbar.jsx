@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
     return (       
 
-<header className="text-gray-300 bg-blue-400 dark:text-white dark:bg-gray-900 body-font">
+<header className="text-gray-300 bg-blue-400 dark:text-white dark:bg-black body-font">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a href="/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
