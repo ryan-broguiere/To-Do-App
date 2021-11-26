@@ -4,17 +4,26 @@ const Task = require("./task");
 const router = express.Router();
 
   router.post("/add_task", async (request, response) => {
-    const task = new Task(request.body)
-    
+    try{
+    const task = new Task(request.body)    
     task.save();
     response.json(task);
+    }
+    catch(error)
+    {
+      response.send(error)
+    }
   });
 
 
   router.get("/tasks", async (request,response) => {
+    try{
     const tasks = await Task.find();
-
     response.json(tasks);
+    }
+    catch(error){
+      response.send(error)
+    }
   });
 
 
@@ -25,13 +34,16 @@ const router = express.Router();
   });
 
   router.put("/tasks/addedtasks/:taskId", async (request, response) => {
-    const task = await Task.findById(request.params.taskId);
-    
+    try{
+    const task = await Task.findById(request.params.taskId);    
     task.status = !task.status;
     task.date = new Date();
-
     task.save();
-
     response.json(task);
+    }
+    catch (error) {
+      response.send(error)
+      
+    }
   });
 module.exports = router;
