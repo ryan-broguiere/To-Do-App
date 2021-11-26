@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const url = "http://localhost:4000"
+//const url = "http://localhost:4000"
+const url = "https://productivity-list.netlify.app";
 
 const TodoForm = () => {
     const [inputText, setInputText] = useState('')
