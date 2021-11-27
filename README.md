@@ -1,6 +1,6 @@
 # ToDo App
 
-Note: This app works 100% as intended locally, but it seems like Netlify wants me to rewrite the whole backend in order to work with the deployment. I might try Heroku, or if anyone knows how to fix this issue, I would appreciate it.
+Note: This app works 100% as intended locally, but it seems like Netlify wants me to rewrite the whole backend in order to work with the deployment. I also tried Heroku with no success, so if anyone knows how to fix this issue, I would appreciate it.
  
 # Technologies Used
 
