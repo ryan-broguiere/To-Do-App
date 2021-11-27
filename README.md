@@ -20,6 +20,6 @@ Note: This app works 100% as intended locally, but it seems like Netlify wants m
 5. Open another terminal and run `node server.js` or `npx nodemon server.js` in the `backend` folder to start the backend server
 
 ## Coding standards
-* #### Highly prefer if you ask to be assigned to an issue first before you work on it
+* #### Prefer if you ask to be assigned to an issue first before you work on it
 * Try not to edit other files unless necessary
 * Please add comments if you can to help others understand your code
