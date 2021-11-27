@@ -3,7 +3,7 @@ const express = require('express');
 const app = express()
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config({ path: "./db.env" })
-
+const serverless = require('serverless-http');
 
 app.use(express.json())
 app.use(cors())
