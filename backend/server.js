@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config({ path: "./db.env" })
 //const serverless = require('serverless-http');
-
+const port = process.env.PORT || 4000;
 app.use(express.json())
 app.use(cors())
 app.use(require("./routes"))
@@ -42,4 +42,4 @@ db.once("open", function () {
 });
 
 
-app.listen(process.env.PORT, () => console.log(`Server running on Localhost:${process.env.PORT}`))
+app.listen(port, () => console.log(`Server running on Localhost:${port}`))
