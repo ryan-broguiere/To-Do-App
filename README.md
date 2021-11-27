@@ -1,7 +1,8 @@
 # ToDo App
 
 Note: This app works 100% as intended locally, but it seems like Netlify wants me to rewrite the whole backend in order to work with the deployment. I also tried Heroku with no success, so if anyone knows how to fix this issue, I would appreciate it.
- 
+ ![demo](https://user-images.githubusercontent.com/22351537/143672124-2a55791d-25d2-42c7-bb0d-491aeab682d1.gif)
+
 # Technologies Used
 
 * React
