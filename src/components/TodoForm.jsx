@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-const url = "http://localhost:4000";
-// const url = "https://productivity-list.netlify.app/tasks";
 
-const TodoForm = () => {
+const TodoForm = (props) => {
     const [inputText, setInputText] = useState('')
     const inputHandler = (event) => {
         event.preventDefault()
-        //console.log(inputText);
-
-        const newTask = {
-            taskName: inputText
+        
+        const task = {
+          taskName: inputText,
+          id: Math.random(),
+          status: false,
+          date: Date.now
         }
-        axios.post(url + "/add_task", newTask);
+        
 
         
     }
