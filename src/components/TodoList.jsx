@@ -1,14 +1,11 @@
-import React, { useState} from 'react';
-import TodoForm from './TodoForm'
+import React from 'react';
 
 
-function TodoList() {
+
+function TodoList({tasks}) {
   
-    const [tasks, setTasks] = useState([]);
+   
 
- 
-    const newTasks = [TodoForm.task, ...tasks]
-    setTasks(newTasks)
     const completeTask = () => {console.log('completed')}
     const deleteTask = () => {console.log('deleted')}
     return (
@@ -21,7 +18,7 @@ function TodoList() {
             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
             <path d="M22 4L12 14.01l-3-3"></path>
           </svg>
-          </button><p className={"absolute left-12 inline float-left text-left dark:text-gray-200 " + (task.status ? " text-blue-400 dark:text-blue-400 line-through ":"")}>{task.date.slice(0,10)}</p>
+          </button><p className={"absolute left-12 inline float-left text-left dark:text-gray-200 " + (task.status ? " text-blue-400 dark:text-blue-400 line-through ":"")}>{task.date}</p>
           <span className={"title-font font-semibold dark:text-gray-100" + (task.status ? " text-blue-400 dark:text-blue-400 line-through":"")}>{task.taskName} </span>
           <button className="float-right absolute right-4 transition duration-400 transform hover:scale-110" onClick={ () => deleteTask(task.id)}>
           <img width="25" height="25" src="https://img.icons8.com/flat-round/64/000000/delete-sign.png" alt='delete'/>         
