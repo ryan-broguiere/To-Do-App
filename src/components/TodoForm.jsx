@@ -6,7 +6,7 @@ const TodoForm = ({inputText, setInputText, tasks, setTasks}) => {
     taskName: inputText,
     id: Math.random(),
     status: false,
-    date: new Date().toString()
+    date: new Date().toString().slice(0, 25)
   }
 
   const inputHandler = (event) => {

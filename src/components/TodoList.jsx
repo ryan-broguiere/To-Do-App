@@ -5,7 +5,7 @@ import React from 'react';
 function TodoList({tasks}) { 
    
 
-    const completeTask = () => {console.log('completed')}
+    const completeTask = (task) => {task.status=true}
     const deleteTask = () => {console.log('deleted')}
     
     return (
