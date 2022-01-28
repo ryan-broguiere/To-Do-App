@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from './components/Navbar'
 import TodoList from './components/TodoList'
 import Footer from './components/Footer';
 import TodoForm from './components/TodoForm'
 
 function App() {
+  const [inputText, setInputText] = useState('')
+  const [tasks, setTasks] = useState([])      
+  
+
   return (
     <div>
       <Navbar/>
-      <TodoForm/>
-      <TodoList/>
+      <TodoForm tasks={tasks} setTasks={setTasks} inputText={inputText} setInputText={setInputText}/> {/*passing props to the component*/}
+      <TodoList tasks={tasks}/>
       <Footer/>      
     </div>
    
