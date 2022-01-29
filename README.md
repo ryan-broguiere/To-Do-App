@@ -2,7 +2,7 @@
 
  ![demo](https://user-images.githubusercontent.com/22351537/143672124-2a55791d-25d2-42c7-bb0d-491aeab682d1.gif)
  
- Front-end : passing data through components using props and state
+ React-only : passing data through components using props and state
  
  Full-stack: passing data and updating components using REST API
 
