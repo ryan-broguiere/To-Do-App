@@ -13,7 +13,7 @@ function App() {
     <div>
       <Navbar/>
       <TodoForm tasks={tasks} setTasks={setTasks} inputText={inputText} setInputText={setInputText}/> {/*passing props to the component*/}
-      <TodoList tasks={tasks}/>
+      <TodoList tasks={tasks} setTasks={setTasks}/>
       <Footer/>      
     </div>
    
