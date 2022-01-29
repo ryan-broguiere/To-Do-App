@@ -10,9 +10,13 @@ const TodoForm = ({inputText, setInputText, tasks, setTasks}) => {
   }
 
   const inputHandler = (event) => {
-    event.preventDefault()    
+    event.preventDefault()
+    if (!task.taskName)
+    {alert ('The task should have a name.')}
+    else{    
     setTasks([...tasks, {task}])
-    setInputText('')   
+    setInputText('')
+    }   
 }
 
 

@@ -5,9 +5,19 @@ import React from 'react';
 function TodoList({tasks, setTasks}) { 
    
 
-    const completeTask = (task) => console.log('complete')
-  
-    const deleteTask = (task) => {setTasks(tasks.filter(el => el.task.id !== task.id))} //if there is an element in the tasks array that matches the element being clicked, it is removed and the remaining tasks are 'filtered' or left untouched in the array
+    const completeTask = (task) => {
+      for (let i = 0; i <tasks.length; i++)
+      {
+        if (tasks[i].task.id===task.id)
+        {
+          tasks[i].task.status = !tasks[i].task.status
+             
+        }        
+      }
+      return task;
+    }
+    
+    const deleteTask = (task) => {setTasks(tasks.filter(el => el.task.id !== task.id))} //if there is an element in the 'tasks' array that matches the element being clicked, it is removed and the remaining tasks are 'filtered' or left untouched in the array
     
     return (
       <section>{/* access the object 'task' inside the task variable*/}
